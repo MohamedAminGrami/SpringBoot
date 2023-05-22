@@ -1,0 +1,19 @@
+spring:
+  cache:
+    redis:
+      time-to-live: 600000
+
+  data:
+    cassandra:
+      contact-points: localhost
+      keyspace-name: todoList
+      schema-action: CREATE_IF_NOT_EXISTS
+
+  kafka:
+    consumer:
+      group-id: group-id
+    template:
+      default-topic: todoListUsers
+
+  redis:
+    host: localhost
