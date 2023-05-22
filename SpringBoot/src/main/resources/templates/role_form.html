@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+ <meta charset="ISO-8859-1">
+ <tilte></title>
+ <link rel="stylesheet" type="text/css"  th:href="@{/webjars/bootstrap/4.5.0/css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container text-center">
+   <div><h1><a th:href="@{/}">Home</a></h1></div>
+   <div th:if="${role.id == null}"><h1>Creer Un Nouveau Role </h1></div>
+   <div th:unless="${role.id == null}"><h1>Modifier Un Role</h1></div>
+   
+   <form th:action="@{/ROLE/roles/save}"  th:object="${role}" method="post" style="max-width: 600px; margin: 0 auto;">
+   <input type="hidden" th:field="*{id}" />
+   <div class="container text-center">
+     <div class="form-group-now">
+        <label class="col-form-label  col-sm-4">Nom Du Role: </label>
+        <div class="col-sm-8">
+          <input type="text"  th:field="*{name}" class="form-control"  required />
+         </div>
+    <div class="text-center p-3">
+         <button type="submit"  class="btn btn-primary">Enregistrer</button>
+      </div>
+   </div>
+   </form>
+</body>
+</html>
+       
