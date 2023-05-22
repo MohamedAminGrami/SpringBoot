@@ -6,5 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.Entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User,Integer> {
+	User findByEmail(String email);
 
 }
