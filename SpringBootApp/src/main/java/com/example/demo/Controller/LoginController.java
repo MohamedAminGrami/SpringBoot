@@ -25,7 +25,7 @@ public class LoginController {
         
         if (user != null && user.getPassword().equals(password)) {
             // Authentication successful
-            return "redirect:/home"; // Redirect to the home page or any other authenticated page
+            return "redirect:/"; // Redirect to the home page or any other authenticated page
         } else {
             // Authentication failed
             return "redirect:/login?error"; // Redirect back to the login page with an error parameter
