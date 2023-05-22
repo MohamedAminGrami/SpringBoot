@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 import com.example.demo.Entity.Role;
-import com.example.demo.Entity.User;
+// import com.example.demo.Entity.User;
 import com.example.demo.Repository.RoleRepository;
-import com.example.demo.Repository.UserRepository;
+// import com.example.demo.Repository.UserRepository;
 @Controller
 @RequestMapping("/ROLE")
 public class RoleController {
-	   @Autowired
-	   private UserRepository userRepo;
+	//    @Autowired
+	//    private UserRepository userRepo;
 	   @Autowired
 	   private RoleRepository roleRepo;
 	   @GetMapping("/roles")
